@@ -23,7 +23,7 @@ const ColumnChart = ({ countryData }) => {
             align: 'left'
         },
         xaxis: {
-            categories: Object.keys(countryData) // Countries as x-axis categories
+            categories: Object.keys(countryData) 
         },
         yaxis: {
             title: {
@@ -38,7 +38,7 @@ const ColumnChart = ({ countryData }) => {
 
     const series = [{
         name: 'Total Visitors',
-        data: Object.values(countryData) // Total visitors for each country
+        data: Object.values(countryData) 
     }];
 
     return (

@@ -13,7 +13,7 @@ const FetchData = ({setData}) => {
       try {
 
         const response = await axios.get('/waterdip-ai-frontend-assignment/data/hotel_bookings_1000.csv', {
-          responseType: 'text', // This tells axios to treat the response as plain text
+          responseType: 'text',
         });
         console.log(response.data);
         console.log('test');
@@ -43,35 +43,7 @@ const FetchData = ({setData}) => {
     fetchData();
   }, []);
 
-  return (
-    <div>
-      
-
-      {/* Display CSV data in a table
-      {cleanData.length > 0 ? (
-        <table border="1">
-          <thead>
-            <tr>
-              {Object.keys(cleanData[0]).map((header) => (
-                <th key={header}>{header}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {cleanData.map((row, index) => (
-              <tr key={index}>
-                {Object.values(row).map((value, idx) => (
-                  <td key={idx}>{value}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : (
-        <p>Loading data...</p>
-      )} */}
-    </div>
-  )
+  return null
 
 }
 

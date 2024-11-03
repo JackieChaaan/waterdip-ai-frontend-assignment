@@ -7,7 +7,7 @@ const SparklineChart = ({ adultVisitors, childrenVisitors }) => {
     const [totalChildren, setTotalChildren] = useState(0);
 
     useEffect(() => {
-        // Calculate totals
+        
         setTotalAdults(adultVisitors.reduce((acc, curr) => acc + curr, 0));
         setTotalChildren(childrenVisitors.reduce((acc, curr) => acc + curr, 0));
 
@@ -57,15 +57,15 @@ const SparklineChart = ({ adultVisitors, childrenVisitors }) => {
             colors: ['#FF9F00'],
         };
 
-        // Render adult chart
+        
         const adultChart = new ApexCharts(document.querySelector("#chart-adult"), adultOptions);
         adultChart.render();
 
-        // Render children chart
+        
         const childrenChart = new ApexCharts(document.querySelector("#chart-children"), childrenOptions);
         childrenChart.render();
 
-        // Cleanup charts on component unmount
+       
         return () => {
             adultChart.destroy();
             childrenChart.destroy();
@@ -88,8 +88,6 @@ const SparklineChart = ({ adultVisitors, childrenVisitors }) => {
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 };

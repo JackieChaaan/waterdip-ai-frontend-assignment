@@ -40,7 +40,7 @@ const ChartContainer = ({ data }) => {
         setFilteredData(filtered);
     }, [data]);
 
-    // Prepare data for charts
+    
     const aggregatedData = filteredData.reduce((acc, item) => {
         const date = `${item.arrival_date_year}-${String(item.arrival_date_month).padStart(2, '0')}-${String(item.arrival_date_day_of_month).padStart(2, '0')}`;
         const totalForDate = (Number(item.babies) || 0) + (Number(item.children) || 0) + (Number(item.adults) || 0);
