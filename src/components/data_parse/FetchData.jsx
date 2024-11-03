@@ -12,7 +12,7 @@ const FetchData = ({setData}) => {
 
       try {
 
-        const response = await axios.get('/data/hotel_bookings_1000.csv', {
+        const response = await axios.get('/waterdip-ai-frontend-assignment/data/hotel_bookings_1000.csv', {
           responseType: 'text', // This tells axios to treat the response as plain text
         });
         console.log(response.data);
